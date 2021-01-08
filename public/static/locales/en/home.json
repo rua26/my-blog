@@ -1,3 +1,7 @@
 {   
-
+    "navBar": {
+        "articles": "Articles",
+        "guides": "Guides",
+        "about": "About"
+    }
 }

@@ -9,11 +9,13 @@ import { Router } from 'next-i18next';
 // Components
 import Dropdown from './client/Dropdown';
 import Button from './client/Button';
+import Img from './client/Img';
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '@redux/actions';
 import { ReduxStates } from '@redux/reducers';
+import { logicalExpression } from '@babel/types';
 
 /**
  * Header
@@ -30,7 +32,7 @@ interface IComponentHeader<P = {}> extends React.FC<P> {
 const Header: IComponentHeader<Props> = (props) => {
     // Constructor
     const locale = useSelector((states: ReduxStates) => states.locale);
-    const { t } = useTranslation(['title']);
+    const { t } = useTranslation(['home']);
     const dispatch = useDispatch();
     const [state, setState] = useState(() => {
         return {
@@ -76,33 +78,28 @@ const Header: IComponentHeader<Props> = (props) => {
     return (
         <Fragment>
             <Head>
-                <title>Robomine</title>
+                <title>Tony Le</title>
                 <link href="/library-asset/css/toastr.min.css" rel="stylesheet" />
                 <link href="/library-asset/css/tachyons.min.css" rel="stylesheet" />
                 <link href="/client-asset/css/main.css" rel="stylesheet" />
-                <link rel="icon" type="image/png" href="/favicon.png" />
+                <link rel="icon" type="image/ico" href="/favicon.ico" />
             </Head>
             {!props.pageLoading ? (
                 <div className="components__header white">
                     <div className="flex justify-between items-center">
-                        <div>Logo Here</div>
+                        <div>
+                            <Img src="/image-asset/logo.svg" />
+                        </div>
                         <div className="bases__text--bold bases__p--cursor flex items-center">
-                            <Dropdown id={'menu_1_dropdown'} items={state.menu_1} itemIndex={'title'} onClickItem={(item: any) => {}}>
+                            {/* <Dropdown id={'menu_1_dropdown'} items={state.menu_1} itemIndex={'title'} onClickItem={(item: any) => {}}>
                                 <div className="mr4 ml2 drop-trigger">Menu 1</div>
-                            </Dropdown>
-                            <div className="mr4 ml2">Menu 2</div>
-                            <div className="mr4 ml2">Menu 3</div>
-                            <div className="mr5 ml2">Menu 4</div>
-                            <div className="ml2">
-                                <Button className="mr1">
-                                    <i className="" />
-                                    Web Wallet
-                                </Button>
-                                <Button>Get the App</Button>
-                            </div>
+                            </Dropdown> */}
+                            <div className="mr4 ml5">{t('home:navBar.articles')}</div>
+                            <div className="mr4 ml5">{t('home:navBar.guides')}</div>
+                            <div className="mr5 ml5">{t('home:navBar.about')}</div>
                         </div>
                     </div>
-                    {/* <div className="bases__font--22 ph3-l">
+                    <div className="bases__font--22 ph3-l">
                         <Dropdown
                             id={'multilang-dropdown'}
                             items={state.languages}
@@ -110,7 +107,7 @@ const Header: IComponentHeader<Props> = (props) => {
                             onClickItem={(item: any) => setLanguage(item.code)}>
                             {locale}
                         </Dropdown>
-                    </div> */}
+                    </div>
                 </div>
             ) : (
                 ''
@@ -121,7 +118,7 @@ const Header: IComponentHeader<Props> = (props) => {
 
 Header.getInitialProps = async () => {
     return {
-        namespacesRequired: ['title'],
+        namespacesRequired: ['home'],
     };
 };
 

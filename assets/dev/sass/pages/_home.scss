@@ -8,7 +8,8 @@
             left: 0;
             width: 100%;
             z-index: -1;
-            background-image: linear-gradient(242deg, $color-blue-gray, $color-light-blue 70%, $color-dark-blue 40%, $color-dark-blue);
+            // background-image: linear-gradient(242deg, $color-blue-gray, $color-light-blue 70%, $color-dark-blue 40%, $color-dark-blue);
+            background-color: $color-black;
         }
         &-section {
             margin-top: 95px;

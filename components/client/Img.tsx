@@ -50,10 +50,10 @@ const Img: IComponentImg<Props> = (props) => {
                 onClick={() => onClick()}
                 onLoad={() => handleImageLoaded()}
                 debounce={0}
-                alt="Robomine.io"
+                alt="Rua.io"
             />
             <noscript>
-                <img className={className} src={src} alt="Robomine.io" />
+                <img className={className} src={src} alt="Rua.io" />
             </noscript>
         </Fragment>
     );
