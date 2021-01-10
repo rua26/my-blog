@@ -1,18 +1,29 @@
 .pages {
     &__home {
-        &-banner {
-            padding: 60px 180px;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: -1;
-            // background-image: linear-gradient(242deg, $color-blue-gray, $color-light-blue 70%, $color-dark-blue 40%, $color-dark-blue);
-            background-color: $color-black;
-        }
-        &-section {
-            margin-top: 95px;
+        &--lead {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin: 0 auto;
+            .elevator {
+                flex: 2 1;
+            }
+            .profile-section {
+                flex: 1 1;
+                align-items: center;
+                flex-direction: column;
+                background: radial-gradient(circle at 20% 20%,lightblue 25%,#4640ff 100%);
+                box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100,110,140,.4);
+                color: hsla(0,0%,100%,.9);
+                text-align: center;
+                margin: 2rem 0;
+                padding: 1.5rem;
+                border-radius: 10px;
+                p {
+                    font-size: 1.15rem;
+                }
+            }
         }
     }
 }

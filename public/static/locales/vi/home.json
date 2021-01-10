@@ -1,7 +1,12 @@
-{   
-    "navBar": {
-        "articles": "Bài hướng dẫn",
-        "guides": "Chỉ dẫn",
-        "about": "Thông tin"
+{
+    "elevator": {
+        "name": "I'm Kim",
+        "bio": "I'm a fullstack software developer creating website and writting blogs.",
+        "gitHub": "github"
+    },
+    "profile": {
+        "title": "Kim",
+        "quote": "Learn learn and learn again. Keep going forward.",
+        "message": "Message"
     }
 }

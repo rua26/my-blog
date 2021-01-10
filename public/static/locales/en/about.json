@@ -1,0 +1,20 @@
+{
+    "about": "About me:",
+    "introduce": "Hello everyone. I'm Le, a full stack software developer, amateur photographer and aviation engineer. This website is a compendium of the things I have learned over the years and the things I loved.",
+    "contact": "You can read",
+    "articles": "read my articles",
+    "or": "or",
+    "contact_me": "contact me",
+    "characters": {
+        "student": "is a student at MAI.",
+        "single_man": "is a single man.",
+        "speak_russia": "can speak Russia.",
+        "developer": "would like to be a fullstack developer.",
+        "photography": "intersted in photography.",
+        "sports": "can play volleyball, basketball, football, table tennis..."
+    },
+    "year_in_review": "Year in review: ",
+    "list_to_do": "List to do",
+    "places": "Where have Rua been ?",
+    "favorite_films": "My favorite films"
+}

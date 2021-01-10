@@ -23,7 +23,6 @@
     "type": "git",
     "url": "https://github.com/rua26/my-blog.git"
   },
-  "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.8.0",

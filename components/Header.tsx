@@ -32,24 +32,10 @@ interface IComponentHeader<P = {}> extends React.FC<P> {
 const Header: IComponentHeader<Props> = (props) => {
     // Constructor
     const locale = useSelector((states: ReduxStates) => states.locale);
-    const { t } = useTranslation(['home']);
+    const { t } = useTranslation(['header']);
     const dispatch = useDispatch();
     const [state, setState] = useState(() => {
         return {
-            menu_1: [
-                {
-                    title: 'Wallet',
-                },
-                {
-                    title: 'Cards',
-                },
-                {
-                    title: 'Bank transfers',
-                },
-                {
-                    title: 'Shopping',
-                },
-            ],
             languages: [
                 {
                     code: 'en',
@@ -94,9 +80,9 @@ const Header: IComponentHeader<Props> = (props) => {
                             {/* <Dropdown id={'menu_1_dropdown'} items={state.menu_1} itemIndex={'title'} onClickItem={(item: any) => {}}>
                                 <div className="mr4 ml2 drop-trigger">Menu 1</div>
                             </Dropdown> */}
-                            <div className="mr4 ml5">{t('home:navBar.articles')}</div>
-                            <div className="mr4 ml5">{t('home:navBar.guides')}</div>
-                            <div className="mr5 ml5">{t('home:navBar.about')}</div>
+                            <div className="mr4 ml5">{t('header:navBar.articles')}</div>
+                            <div className="mr4 ml5">{t('header:navBar.guides')}</div>
+                            <div className="mr5 ml5">{t('header:navBar.about')}</div>
                         </div>
                     </div>
                     <div className="bases__font--22 ph3-l">
@@ -118,7 +104,7 @@ const Header: IComponentHeader<Props> = (props) => {
 
 Header.getInitialProps = async () => {
     return {
-        namespacesRequired: ['home'],
+        namespacesRequired: ['header'],
     };
 };
 
